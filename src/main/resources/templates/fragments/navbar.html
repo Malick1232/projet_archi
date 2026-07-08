@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extra/spring-security" lang="fr">
+<body>
+
+<header th:fragment="navbar">
+
+    <style>
+        body { background: #e9f2fc; }
+        h1, h2 { color: #0b3d91; font-weight: 700; }
+        .card { border: none; border-left: 5px solid #1265d2; border-radius: 10px;
+                box-shadow: 0 2px 6px rgba(13, 71, 161, .10); }
+        .card h3 a { color: #0b3d91; text-decoration: none; font-weight: 600; }
+        .card h3 a:hover { text-decoration: underline; }
+        .bandeau-titre { background: #0b3d91; }
+        .bandeau-nav { background: #1265d2; }
+        .btn-categorie { background: #ffffff; color: #1265d2; font-weight: 700; }
+        .btn-categorie:hover { background: #dce9fa; color: #0b3d91; }
+        .btn-accueil { background: #0b3d91; color: #ffffff; font-weight: 700; }
+        .btn-accueil:hover { color: #ffffff; }
+    </style>
+
+    <div class="bandeau-titre py-3">
+        <h1 class="text-center text-white text-uppercase m-0"
+            style="letter-spacing: 2px; font-size: 1.9rem; color: #ffffff;">
+            Actualités Polytechniciennes
+        </h1>
+    </div>
+
+    <nav class="bandeau-nav py-2 mb-4">
+        <div class="container d-flex align-items-center flex-wrap">
+
+            <div class="mx-auto">
+                <a class="btn btn-sm btn-accueil me-2" th:href="@{/}">Accueil</a>
+                <a class="btn btn-sm btn-categorie me-2"
+                   th:each="cat : ${categories}"
+                   th:href="@{/categorie/{id}(id=${cat.id})}"
+                   th:text="${cat.libelle}">
+                </a>
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <a class="btn btn-sm btn-outline-light me-2" sec:authorize="!isAuthenticated()"
+                   th:href="@{/login}">Se connecter</a>
+
+                <a class="btn btn-sm btn-outline-light me-2" sec:authorize="hasAnyRole('EDITEUR','ADMIN')"
+                   th:href="@{/editeur/articles}">Espace éditeur</a>
+
+                <a class="btn btn-sm btn-outline-light me-2" sec:authorize="hasRole('ADMIN')"
+                   th:href="@{/admin/utilisateurs}">Espace admin</a>
+
+                <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post"
+                      class="d-flex align-items-center m-0">
+                    <span class="text-white me-2" sec:authentication="name"></span>
+                    <button type="submit" class="btn btn-sm btn-outline-light">Déconnexion</button>
+                </form>
+
+            </div>
+
+        </div>
+    </nav>
+
+</header>
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 INSERT INTO utilisateur (nom, prenom, login, mot_de_passe, role, date_creation)
 VALUES
-('Admin', 'Principal', 'admin', '$2a$10$7QJxLQdS8nqQ5M4jLk8gQe8P2Q3D9W0k2nP5Q2g5Q0V0Q9S6JmP8W', 'ADMIN', NOW()),
-('Diallo', 'Editeur', 'editeur', '$2a$10$7QJxLQdS8nqQ5M4jLk8gQe8P2Q3D9W0k2nP5Q2g5Q0V0Q9S6JmP8W', 'EDITEUR', NOW());
+('Admin', 'Principal', 'admin', '$2b$10$H/n5bWhbi9LE2J6qFgs.VeQ4lmifkrMQN.yy1MCYapKbOE3JGPlgi', 'ADMIN', NOW()),
+('Diallo', 'Editeur', 'editeur', '$2b$10$zqLikKIfXeFhJiSnjyVj6ulz79POclbf/Fq.VYpIiUZ1vKhBA/Him', 'EDITEUR', NOW());
 
 INSERT INTO categorie (libelle, description)
 VALUES

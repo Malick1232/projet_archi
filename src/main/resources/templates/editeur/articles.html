@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des articles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<div class="container mt-4">
+
+    <a th:href="@{/}" class="btn btn-outline-primary mb-3">← Accueil</a>
+    <a th:href="@{/editeur/categories}" class="btn btn-outline-primary mb-3">Gérer les catégories</a>
+
+    <h1>Gestion des articles</h1>
+
+    <a th:href="@{/editeur/articles/nouveau}" class="btn btn-primary mb-3">+ Nouvel article</a>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Catégorie</th>
+            <th>Date</th>
+            <th>Auteur</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="art : ${articles}">
+            <td th:text="${art.titre}"></td>
+            <td th:text="${art.categorie.libelle}"></td>
+            <td th:text="${#temporals.format(art.datePublication,'dd/MM/yyyy HH:mm')}"></td>
+            <td th:text="${art.auteur.login}"></td>
+            <td>
+                <a th:href="@{/editeur/articles/{id}/modifier(id=${art.id})}"
+                   class="btn btn-sm btn-outline-primary">Modifier</a>
+                <form th:action="@{/editeur/articles/{id}/supprimer(id=${art.id})}"
+                      method="post" style="display:inline"
+                      onsubmit="return confirm('Supprimer cet article ?');">
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

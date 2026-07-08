@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${article.titre}">Article</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+
+<div class="container mt-5">
+
+    <a th:href="@{/}" class="btn btn-outline-primary mb-4">
+        ← Retour à l'accueil
+    </a>
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h2 class="card-title"
+                th:text="${article.titre}">
+            </h2>
+
+            <hr>
+
+            <p>
+
+                <strong>Catégorie :</strong>
+
+                <span class="badge bg-primary"
+                      th:text="${article.categorie.libelle}">
+                </span>
+
+            </p>
+
+            <p>
+
+                <strong>Auteur :</strong>
+
+                <span th:text="${article.auteur.prenom + ' ' + article.auteur.nom}">
+                </span>
+
+            </p>
+
+            <p>
+
+                <strong>Date de publication :</strong>
+
+                <span th:text="${#temporals.format(article.datePublication,'dd/MM/yyyy HH:mm')}">
+                </span>
+
+            </p>
+
+            <hr>
+
+            <h4>Résumé</h4>
+
+            <p th:text="${article.resume}">
+            </p>
+
+            <hr>
+
+            <h4>Contenu</h4>
+
+            <p th:text="${article.contenu}">
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

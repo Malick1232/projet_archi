@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des utilisateurs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<div class="container mt-4">
+
+    <a th:href="@{/}" class="btn btn-outline-primary mb-3">← Accueil</a>
+    <a th:href="@{/admin/jetons}" class="btn btn-outline-primary mb-3">Gérer les jetons</a>
+
+    <h1>Gestion des utilisateurs</h1>
+
+    <div class="alert alert-danger" th:if="${erreur}" th:text="${erreur}"></div>
+
+    <a th:href="@{/admin/utilisateurs/nouveau}" class="btn btn-primary mb-3">+ Nouvel utilisateur</a>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Login</th>
+            <th>Rôle</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="u : ${utilisateurs}">
+            <td th:text="${u.nom}"></td>
+            <td th:text="${u.prenom}"></td>
+            <td th:text="${u.login}"></td>
+            <td><span class="badge bg-primary" th:text="${u.role}"></span></td>
+            <td>
+                <a th:href="@{/admin/utilisateurs/{id}/modifier(id=${u.id})}"
+                   class="btn btn-sm btn-outline-primary">Modifier</a>
+                <form th:action="@{/admin/utilisateurs/{id}/supprimer(id=${u.id})}"
+                      method="post" style="display:inline"
+                      onsubmit="return confirm('Supprimer cet utilisateur ?');">
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
