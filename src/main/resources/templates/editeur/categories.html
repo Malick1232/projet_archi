@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des catégories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<div class="container mt-4">
+
+    <a th:href="@{/}" class="btn btn-outline-primary mb-3">← Accueil</a>
+
+    <h1>Gestion des catégories</h1>
+
+    <a th:href="@{/editeur/categories/nouvelle}" class="btn btn-primary mb-3">+ Nouvelle catégorie</a>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Libellé</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="cat : ${categories}">
+            <td th:text="${cat.libelle}"></td>
+            <td th:text="${cat.description}"></td>
+            <td>
+                <a th:href="@{/editeur/categories/{id}/modifier(id=${cat.id})}"
+                   class="btn btn-sm btn-outline-primary">Modifier</a>
+                <form th:action="@{/editeur/categories/{id}/supprimer(id=${cat.id})}"
+                      method="post" style="display:inline"
+                      onsubmit="return confirm('Supprimer cette catégorie ?');">
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

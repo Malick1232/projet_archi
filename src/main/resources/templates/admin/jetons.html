@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jetons d'authentification</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/navbar :: navbar}"></div>
+<div class="container mt-4">
+
+    <a th:href="@{/}" class="btn btn-outline-primary mb-3">← Accueil</a>
+    <a th:href="@{/admin/utilisateurs}" class="btn btn-outline-primary mb-3">Gérer les utilisateurs</a>
+
+    <h1>Jetons d'authentification (services web)</h1>
+    <p class="text-primary-emphasis">
+        Ces jetons permettent aux applications externes d'accéder au service SOAP
+        de gestion des utilisateurs.
+    </p>
+
+    <form th:action="@{/admin/jetons/generer}" method="post" class="mb-3">
+        <button type="submit" class="btn btn-primary">+ Générer un jeton</button>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Valeur</th>
+            <th>Créé par</th>
+            <th>Date</th>
+            <th>Actif</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="j : ${jetons}">
+            <td><code th:text="${j.valeur}"></code></td>
+            <td th:text="${j.creePar.login}"></td>
+            <td th:text="${#temporals.format(j.dateCreation,'dd/MM/yyyy HH:mm')}"></td>
+            <td>
+                <span class="badge bg-primary" th:if="${j.actif}">Actif</span>
+                <span class="badge bg-light text-primary border border-primary" th:unless="${j.actif}">Inactif</span>
+            </td>
+            <td>
+                <form th:action="@{/admin/jetons/{id}/supprimer(id=${j.id})}"
+                      method="post" style="display:inline"
+                      onsubmit="return confirm('Supprimer ce jeton ? Les applications qui l&#39;utilisent perdront l&#39;accès.');">
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>
