@@ -19,10 +19,19 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
+            // Le service SOAP reçoit des POST sans jeton CSRF (ce n'est pas un formulaire du site) :
+            // on désactive la protection CSRF sur /ws/** uniquement.
+            .csrf(csrf -> csrf.ignoringRequestMatchers("/ws/**"))
+
             .authorizeHttpRequests(auth -> auth
 
                 .requestMatchers("/", "/article/**", "/categorie/**", "/error",
         "/css/**", "/js/**", "/images/**")
+                .permitAll()
+
+                // Services web (section 4) : sécurité gérée par eux-mêmes
+                // (le SOAP vérifie le jeton, le REST est en lecture seule public)
+                .requestMatchers("/api/**", "/ws/**")
                 .permitAll()
 
                 .requestMatchers("/editeur/**")

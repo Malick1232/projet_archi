@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://siteactualites.com/soap/utilisateurs"
+           targetNamespace="http://siteactualites.com/soap/utilisateurs"
+           elementFormDefault="qualified">
+
+    <!-- ===================== authentifier ===================== -->
+    <xs:element name="authentifierRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="login" type="xs:string"/>
+                <xs:element name="motDePasse" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="authentifierResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="role" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ===================== listerUtilisateurs ===================== -->
+    <xs:element name="listerUtilisateursRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jeton" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="listerUtilisateursResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="utilisateur" type="tns:utilisateurInfo" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ===================== ajouterUtilisateur ===================== -->
+    <xs:element name="ajouterUtilisateurRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jeton" type="xs:string"/>
+                <xs:element name="utilisateur" type="tns:utilisateurCreation"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ajouterUtilisateurResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="utilisateur" type="tns:utilisateurInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ===================== modifierUtilisateur ===================== -->
+    <xs:element name="modifierUtilisateurRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jeton" type="xs:string"/>
+                <xs:element name="utilisateur" type="tns:utilisateurModification"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="modifierUtilisateurResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="utilisateur" type="tns:utilisateurInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ===================== supprimerUtilisateur ===================== -->
+    <xs:element name="supprimerUtilisateurRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jeton" type="xs:string"/>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="supprimerUtilisateurResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="succes" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ===================== Types communs ===================== -->
+    <!-- Utilisateur renvoyé au client : jamais de mot de passe -->
+    <xs:complexType name="utilisateurInfo">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="login" type="xs:string"/>
+            <xs:element name="role" type="xs:string"/>
+            <xs:element name="dateCreation" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Données envoyées pour créer un utilisateur -->
+    <xs:complexType name="utilisateurCreation">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="login" type="xs:string"/>
+            <xs:element name="motDePasse" type="xs:string"/>
+            <xs:element name="role" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Données envoyées pour modifier un utilisateur : motDePasse optionnel -->
+    <xs:complexType name="utilisateurModification">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="login" type="xs:string"/>
+            <xs:element name="motDePasse" type="xs:string" minOccurs="0"/>
+            <xs:element name="role" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

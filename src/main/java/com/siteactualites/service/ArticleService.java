@@ -29,6 +29,16 @@ public class ArticleService {
         return articleRepository.findById(id).orElse(null);
     }
 
+    // Liste complète (sans pagination), utilisée par le service REST
+    public java.util.List<Article> listerTous() {
+        return articleRepository.findAllByOrderByDatePublicationDesc();
+    }
+
+    // Liste complète d'une catégorie (sans pagination), utilisée par le service REST
+    public java.util.List<Article> listerParCategorie(Categorie categorie) {
+        return articleRepository.findByCategorieOrderByDatePublicationDesc(categorie);
+    }
+
     // Enregistrer ou modifier un article
     public Article enregistrer(Article article) {
         return articleRepository.save(article);

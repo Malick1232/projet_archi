@@ -19,4 +19,9 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     // Recherche d'un article par son identifiant
     Optional<Article> findById(Long id);
 
+    // Variantes sans pagination, utilisées par le service REST (section 4 du sujet)
+    java.util.List<Article> findAllByOrderByDatePublicationDesc();
+
+    java.util.List<Article> findByCategorieOrderByDatePublicationDesc(Categorie categorie);
+
 }

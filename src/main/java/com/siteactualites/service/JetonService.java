@@ -36,4 +36,18 @@ public class JetonService {
     public void supprimer(Long id) {
         jetonRepository.deleteById(id);
     }
+
+    /**
+     * Vérifie qu'un jeton existe et qu'il est actif.
+     * Utilisé par le service SOAP (section 4 du sujet) avant chaque opération
+     * protégée (toutes sauf authentifier).
+     */
+    public boolean estValide(String valeur) {
+        if (valeur == null || valeur.isBlank()) {
+            return false;
+        }
+        return jetonRepository.findByValeur(valeur)
+                .map(Jeton::isActif)
+                .orElse(false);
+    }
 }
