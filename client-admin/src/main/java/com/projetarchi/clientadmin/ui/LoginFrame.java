@@ -68,7 +68,7 @@ public class LoginFrame extends JFrame {
         String login = champLogin.getText().trim();
         String motDePasse = new String(champMotDePasse.getPassword());
 
-        if (login.isBlank() || motDePasse.isBlank()) {
+        if (login.trim().isEmpty() || motDePasse.trim().isEmpty()) {
             messageErreur.setText("Merci de saisir un login et un mot de passe.");
             return;
         }
@@ -86,9 +86,14 @@ public class LoginFrame extends JFrame {
 
         } catch (ServiceException ex) {
             switch (ex.getType()) {
-                case AUTHENTIFICATION_ECHOUEE -> messageErreur.setText("Login ou mot de passe incorrect.");
-                case SERVICE_INJOIGNABLE -> messageErreur.setText("Service injoignable. Le site est-il démarré ?");
-                default -> messageErreur.setText("Erreur : " + ex.getMessage());
+                case AUTHENTIFICATION_ECHOUEE:
+                    messageErreur.setText("Login ou mot de passe incorrect.");
+                    break;
+                case SERVICE_INJOIGNABLE:
+                    messageErreur.setText("Service injoignable. Le site est-il démarré ?");
+                    break;
+                default:
+                    messageErreur.setText("Erreur : " + ex.getMessage());
             }
             champMotDePasse.setText("");
         }

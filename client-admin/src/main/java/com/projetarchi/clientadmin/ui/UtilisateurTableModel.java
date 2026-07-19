@@ -38,13 +38,19 @@ public class UtilisateurTableModel extends AbstractTableModel {
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Utilisateur u = utilisateurs.get(rowIndex);
-        return switch (columnIndex) {
-            case 0 -> u.getId();
-            case 1 -> u.getNom();
-            case 2 -> u.getPrenom();
-            case 3 -> u.getLogin();
-            case 4 -> u.getRole();
-            default -> "";
-        };
+        switch (columnIndex) {
+            case 0:
+                return u.getId();
+            case 1:
+                return u.getNom();
+            case 2:
+                return u.getPrenom();
+            case 3:
+                return u.getLogin();
+            case 4:
+                return u.getRole();
+            default:
+                return "";
+        }
     }
 }

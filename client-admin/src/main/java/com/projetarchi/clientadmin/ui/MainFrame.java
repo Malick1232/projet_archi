@@ -122,12 +122,20 @@ public class MainFrame extends JFrame {
     }
 
     private void afficherErreur(ServiceException ex) {
-        String titre = switch (ex.getType()) {
-            case JETON_INVALIDE -> "Jeton invalide";
-            case SERVICE_INJOIGNABLE -> "Service injoignable";
-            case AUTHENTIFICATION_ECHOUEE -> "Authentification échouée";
-            case ERREUR_INCONNUE -> "Erreur";
-        };
+        String titre;
+        switch (ex.getType()) {
+            case JETON_INVALIDE:
+                titre = "Jeton invalide";
+                break;
+            case SERVICE_INJOIGNABLE:
+                titre = "Service injoignable";
+                break;
+            case AUTHENTIFICATION_ECHOUEE:
+                titre = "Authentification échouée";
+                break;
+            default:
+                titre = "Erreur";
+        }
         JOptionPane.showMessageDialog(this, ex.getMessage(), titre, JOptionPane.ERROR_MESSAGE);
     }
 }

@@ -45,14 +45,14 @@ public class UtilisateurFormDialog extends JDialog {
         JButton boutonAnnuler = new JButton("Annuler");
 
         boutonValider.addActionListener(e -> {
-            if (champNom.getText().isBlank() || champLogin.getText().isBlank()) {
+            if (champNom.getText().trim().isEmpty() || champLogin.getText().trim().isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Le nom et le login sont obligatoires.",
                         "Champs manquants", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             Long id = utilisateurExistant != null ? utilisateurExistant.getId() : null;
             String motDePasse = new String(champMotDePasse.getPassword());
-            if (motDePasse.isBlank() && utilisateurExistant != null) {
+            if (motDePasse.trim().isEmpty() && utilisateurExistant != null) {
                 motDePasse = utilisateurExistant.getMotDePasse();
             }
             resultat = new Utilisateur(id, champNom.getText(), champPrenom.getText(),

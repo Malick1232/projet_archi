@@ -2,6 +2,7 @@ package com.projetarchi.clientadmin;
 
 import com.projetarchi.clientadmin.config.AppConfig;
 import com.projetarchi.clientadmin.service.MockServiceUtilisateurs;
+import com.projetarchi.clientadmin.service.SoapServiceUtilisateurs;
 import com.projetarchi.clientadmin.service.ServiceUtilisateurs;
 import com.projetarchi.clientadmin.ui.LoginFrame;
 
@@ -21,7 +22,7 @@ public class Main {
         // README et dans les commentaires de cette classe). C'est le SEUL
         // changement nécessaire : LoginFrame et MainFrame ne changent pas.
         // ---------------------------------------------------------------
-        ServiceUtilisateurs service = new MockServiceUtilisateurs();
+	ServiceUtilisateurs service = new SoapServiceUtilisateurs();
         AppConfig config = new AppConfig();
 
         SwingUtilities.invokeLater(() -> new LoginFrame(service, config).setVisible(true));
