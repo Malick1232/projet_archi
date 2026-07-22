@@ -1,0 +1,313 @@
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.siteactualites:site-actualites >-----------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.5.16:run (default-cli) > test-compile @ site-actualites >>>
+[INFO] 
+[INFO] --- jaxb2:3.2.0:xjc (xjc) @ site-actualites ---
+[INFO] Ignored given or default xjbSources [C:\Users\maluc\Desktop\MASTERGL COUR\MASTERGL COUR semeste 2\architecture logiciel\projet_archi finale\projet_archi\src\main\xjb], since it is not an existent file or directory.
+[INFO] No changes detected in schema or binding files - skipping JAXB generation.
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ site-actualites ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 13 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ site-actualites ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ site-actualites ---
+[INFO] skip non existing resourceDirectory C:\Users\maluc\Desktop\MASTERGL COUR\MASTERGL COUR semeste 2\architecture logiciel\projet_archi finale\projet_archi\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ site-actualites ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.5.16:run (default-cli) < test-compile @ site-actualites <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.5.16:run (default-cli) @ site-actualites ---
+[INFO] Attaching agents: []
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-07-21T19:28:17.556+02:00  INFO 27044 --- [           main] c.s.SiteActualitesApplication            : Starting SiteActualitesApplication using Java 21.0.9 with PID 27044 (C:\Users\maluc\Desktop\MASTERGL COUR\MASTERGL COUR semeste 2\architecture logiciel\projet_archi finale\projet_archi\target\classes started by maluc in C:\Users\maluc\Desktop\MASTERGL COUR\MASTERGL COUR semeste 2\architecture logiciel\projet_archi finale\projet_archi)
+2026-07-21T19:28:17.566+02:00  INFO 27044 --- [           main] c.s.SiteActualitesApplication            : No active profile set, falling back to 1 default profile: "default"
+2026-07-21T19:28:20.289+02:00  INFO 27044 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-21T19:28:20.559+02:00  INFO 27044 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 237 ms. Found 4 JPA repository interfaces.
+2026-07-21T19:28:22.827+02:00  INFO 27044 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-21T19:28:22.883+02:00  INFO 27044 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-21T19:28:22.884+02:00  INFO 27044 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-07-21T19:28:23.119+02:00  INFO 27044 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-21T19:28:23.123+02:00  INFO 27044 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5406 ms
+2026-07-21T19:28:23.745+02:00  INFO 27044 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-07-21T19:28:23.955+02:00  INFO 27044 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-07-21T19:28:24.101+02:00  INFO 27044 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-07-21T19:28:25.321+02:00  INFO 27044 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-21T19:28:25.443+02:00  INFO 27044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-07-21T19:28:26.731+02:00  INFO 27044 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69bc4024
+2026-07-21T19:28:26.739+02:00  INFO 27044 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-07-21T19:28:27.050+02:00  INFO 27044 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-21T19:28:30.561+02:00  INFO 27044 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: alter table article drop foreign key FK7f0kx088jorbc69yr2wcvlfot
+Hibernate: alter table article drop foreign key FKqnmbf0yfa804hxcw8c9gneb0v
+Hibernate: alter table jeton drop foreign key FK3dabbq64m477is3trf7pcfw86
+Hibernate: drop table if exists article
+Hibernate: drop table if exists categorie
+Hibernate: drop table if exists jeton
+Hibernate: drop table if exists utilisateur
+Hibernate: create table article (auteur_id bigint not null, categorie_id bigint not null, date_publication datetime(6), id bigint not null auto_increment, resume varchar(500), titre varchar(255) not null, contenu tinytext not null, primary key (id)) engine=InnoDB
+Hibernate: create table categorie (id bigint not null auto_increment, description varchar(500), libelle varchar(255) not null, primary key (id)) engine=InnoDB
+Hibernate: create table jeton (actif bit not null, cree_par bigint not null, date_creation datetime(6), id bigint not null auto_increment, valeur varchar(64) not null, primary key (id)) engine=InnoDB
+Hibernate: create table utilisateur (date_creation datetime(6), id bigint not null auto_increment, login varchar(255) not null, mot_de_passe varchar(255) not null, nom varchar(255) not null, prenom varchar(255) not null, role enum ('ADMIN','EDITEUR') not null, primary key (id)) engine=InnoDB
+Hibernate: alter table categorie add constraint UK201klrwuww0os41kte46ac6lq unique (libelle)
+Hibernate: alter table jeton add constraint UKlhfj5mpnwr74fnouor4wxbb9d unique (valeur)
+Hibernate: alter table utilisateur add constraint UK18vwp4resqussqmlpqnymfqxk unique (login)
+Hibernate: alter table article add constraint FK7f0kx088jorbc69yr2wcvlfot foreign key (auteur_id) references utilisateur (id)
+Hibernate: alter table article add constraint FKqnmbf0yfa804hxcw8c9gneb0v foreign key (categorie_id) references categorie (id)
+Hibernate: alter table jeton add constraint FK3dabbq64m477is3trf7pcfw86 foreign key (cree_par) references utilisateur (id)
+2026-07-21T19:28:32.499+02:00  INFO 27044 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-21T19:28:33.332+02:00  WARN 27044 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-21T19:28:33.392+02:00  INFO 27044 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-07-21T19:28:33.939+02:00  INFO 27044 --- [           main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-07-21T19:28:34.672+02:00  INFO 27044 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-21T19:28:34.689+02:00  INFO 27044 --- [           main] c.s.SiteActualitesApplication            : Started SiteActualitesApplication in 18.58 seconds (process running for 19.543)
+2026-07-21T19:32:10.676+02:00  INFO 27044 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-21T19:32:10.681+02:00  INFO 27044 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-21T19:32:10.687+02:00  INFO 27044 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.login=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a2_0.id,a2_0.date_creation,a2_0.login,a2_0.mot_de_passe,a2_0.nom,a2_0.prenom,a2_0.role,a1_0.categorie_id,c1_0.id,c1_0.description,c1_0.libelle,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 join utilisateur a2_0 on a2_0.id=a1_0.auteur_id join categorie c1_0 on c1_0.id=a1_0.categorie_id where a1_0.id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a2_0.id,a2_0.date_creation,a2_0.login,a2_0.mot_de_passe,a2_0.nom,a2_0.prenom,a2_0.role,a1_0.categorie_id,c1_0.id,c1_0.description,c1_0.libelle,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 join utilisateur a2_0 on a2_0.id=a1_0.auteur_id join categorie c1_0 on c1_0.id=a1_0.categorie_id where a1_0.id=?
+Hibernate: update article set auteur_id=?,categorie_id=?,contenu=?,date_publication=?,resume=?,titre=? where id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select count(a1_0.id) from article a1_0
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+2026-07-21T23:25:37.978+02:00  WARN 27044 --- [l-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h43m7s951ms924µs).
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a2_0.id,a2_0.date_creation,a2_0.login,a2_0.mot_de_passe,a2_0.nom,a2_0.prenom,a2_0.role,a1_0.categorie_id,c1_0.id,c1_0.description,c1_0.libelle,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 join utilisateur a2_0 on a2_0.id=a1_0.auteur_id join categorie c1_0 on c1_0.id=a1_0.categorie_id where a1_0.id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select count(a1_0.id) from article a1_0
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 where a1_0.categorie_id=? order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.login=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select count(a1_0.id) from article a1_0
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a1_0.categorie_id,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 order by a1_0.date_publication desc limit ?
+Hibernate: select u1_0.id,u1_0.date_creation,u1_0.login,u1_0.mot_de_passe,u1_0.nom,u1_0.prenom,u1_0.role from utilisateur u1_0 where u1_0.id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a2_0.id,a2_0.date_creation,a2_0.login,a2_0.mot_de_passe,a2_0.nom,a2_0.prenom,a2_0.role,a1_0.categorie_id,c1_0.id,c1_0.description,c1_0.libelle,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 join utilisateur a2_0 on a2_0.id=a1_0.auteur_id join categorie c1_0 on c1_0.id=a1_0.categorie_id where a1_0.id=?
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+Hibernate: select a1_0.id,a1_0.auteur_id,a2_0.id,a2_0.date_creation,a2_0.login,a2_0.mot_de_passe,a2_0.nom,a2_0.prenom,a2_0.role,a1_0.categorie_id,c1_0.id,c1_0.description,c1_0.libelle,a1_0.contenu,a1_0.date_publication,a1_0.resume,a1_0.titre from article a1_0 join utilisateur a2_0 on a2_0.id=a1_0.auteur_id join categorie c1_0 on c1_0.id=a1_0.categorie_id where a1_0.id=?
+Hibernate: update article set auteur_id=?,categorie_id=?,contenu=?,date_publication=?,resume=?,titre=? where id=?
+2026-07-21T23:28:36.344+02:00  WARN 27044 --- [nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1406, SQLState: 22001
+2026-07-21T23:28:36.346+02:00 ERROR 27044 --- [nio-8080-exec-4] o.h.engine.jdbc.spi.SqlExceptionHelper   : Data truncation: Data too long for column 'contenu' at row 1
+2026-07-21T23:28:36.390+02:00 ERROR 27044 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Data truncation: Data too long for column 'contenu' at row 1] [update article set auteur_id=?,categorie_id=?,contenu=?,date_publication=?,resume=?,titre=? where id=?]; SQL [update article set auteur_id=?,categorie_id=?,contenu=?,date_publication=?,resume=?,titre=? where id=?]] with root cause
+
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'contenu' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:96) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1166) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1101) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1448) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1084) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-6.3.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-6.3.3.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.performNonBatchedMutation(AbstractMutationExecutor.java:134) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:55) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.doStaticUpdate(UpdateCoordinatorStandard.java:824) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.performUpdate(UpdateCoordinatorStandard.java:340) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.persister.entity.mutation.UpdateCoordinatorStandard.update(UpdateCoordinatorStandard.java:257) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.action.internal.EntityUpdateAction.execute(EntityUpdateAction.java:169) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:644) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:511) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:414) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:41) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1429) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:491) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2354) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1978) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-6.6.53.Final.jar:6.6.53.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:563) ~[spring-orm-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:795) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:758) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:698) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:416) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165) ~[spring-data-jpa-3.5.13.jar:3.5.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.19.jar:6.2.19]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.19.jar:6.2.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy127.save(Unknown Source) ~[na:na]
+	at com.siteactualites.service.ArticleService.enregistrer(ArticleService.java:44) ~[classes/:na]
+	at com.siteactualites.controller.EditeurArticleController.enregistrer(EditeurArticleController.java:81) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.55.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:370) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:59) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:216) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:202) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.ui.DefaultResourcesFilter.doFilter(DefaultResourcesFilter.java:72) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:235) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:229) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:134) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:379) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319) ~[spring-security-config-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240) ~[spring-security-config-6.5.11.jar:6.5.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.19.jar:6.2.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.55.jar:10.1.55]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+Hibernate: select c1_0.id,c1_0.description,c1_0.libelle from categorie c1_0
+2026-07-21T23:32:25.068+02:00  INFO 27044 --- [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-21T23:32:25.207+02:00  INFO 27044 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-07-21T23:32:25.223+02:00  INFO 27044 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-21T23:32:25.229+02:00  INFO 27044 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-07-21T23:32:25.250+02:00  INFO 27044 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:04 h
+[INFO] Finished at: 2026-07-21T23:32:25+02:00
+[INFO] ------------------------------------------------------------------------
+Terminer le programme de commandes (O/N) ? ^C

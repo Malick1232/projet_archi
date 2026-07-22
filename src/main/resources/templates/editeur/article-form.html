@@ -10,7 +10,7 @@
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 <div class="container mt-4">
 
-    <h1 th:text="${article.id == null} ? 'Nouvel article' : 'Modifier l&#39;article'"></h1>
+    <h1 th:text="${article.id == null} ? 'Nouvel article' : 'Modifier un article'"></h1>
 
     <form th:action="@{/editeur/articles}" th:object="${article}" method="post">
 
@@ -30,11 +30,6 @@
                         th:text="${cat.libelle}">
                 </option>
             </select>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Résumé</label>
-            <textarea class="form-control" rows="2" maxlength="500" th:field="*{resume}" required></textarea>
         </div>
 
         <div class="mb-3">
