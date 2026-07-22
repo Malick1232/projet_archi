@@ -10,7 +10,7 @@
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 <div class="container mt-4">
 
-    <h1 th:text="${utilisateur.id == null} ? 'Nouvel utilisateur' : 'Modifier l&#39;utilisateur'"></h1>
+    <h1 th:text="${utilisateur.id == null} ? 'Nouvel utilisateur' : 'Modifier un utilisateur'"></h1>
 
     <form th:action="@{/admin/utilisateurs}" th:object="${utilisateur}" method="post">
 
